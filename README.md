@@ -71,32 +71,6 @@ Send a question to the chatbot
 
 The application consists of several key components:
 
-ODP-RAG/
-├── app.py
-├── requirements.txt
-├── setup.py           # New file for package configuration
-├── helpers/
-│   ├── __init__.py
-│   ├── config.py
-│   └── utils.py
-├── ocr/
-│   ├── __init__.py
-│   └── ocr.py
-├── retriever/
-│   ├── __init__.py
-│   └── indexing.py
-├── llm/
-│   ├── __init__.py
-│   └── llm.py
-└── tests/
-    ├── __init__.py
-    ├── conftest.py
-    ├── test_ocr.py
-    ├── test_indexing.py
-    ├── test_llm.py
-    └── data/
-        └── sample.pdf
-
 1. OCR Module
 - Uses Surya OCR for text extraction
 - Performs layout analysis
