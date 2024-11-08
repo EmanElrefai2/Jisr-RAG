@@ -7,16 +7,16 @@ A chatbot capable of answering users’ questions based on the knowledge extract
 
 ## Python Version
 
-   > python 3.9
+   > python 3.10
 
 
 ***
 
 ## Installation
 
-1. Clone the repository: `git clone [<repository_url>](https://github.com/EmanElrefai2/Jisr-RAG)`
+1. Clone the repository: `git clone https://github.com/EmanElrefai2/Jisr-RAG`
 2. Navigate to the project directory: `cd Jisr-RAG`
-3. Create the environment: `python3.9 -m venv myenv`
+3. Create the environment: `python3.10 -m venv myenv`
 4. Activate the environment: `source myenv/bin/activate`
 5. Install dependencies: `pip install -r requirements.txt`
 6. Run the main application: `python main.py`
@@ -40,7 +40,9 @@ To run the application using Docker:
 
 1. Run tests: `pytest tests/`
 
-
+## Presentation
+- [Slides](https://docs.google.com/presentation/d/1VRMtCKVCx3yLVEoGoagUFLNBOIeJ0o-mouakylgRlVE/edit?usp=sharing)
+- [Video Demo](https://drive.google.com/file/d/16EZTPmdL0qQ7RSEDc-yLkM5dO2gFlCjI/view?usp=sharing)
 ## Documentation
 
 ### Features
