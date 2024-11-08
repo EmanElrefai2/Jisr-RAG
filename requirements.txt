@@ -1,0 +1,20 @@
+pandas==2.2.2
+pillow==10.4.0
+pdf2image==1.17.0
+torch --index-url https://download.pytorch.org/whl/cu124
+torchvision --index-url https://download.pytorch.org/whl/cu124 
+torchaudio --index-url https://download.pytorch.org/whl/cu124
+pypdfium2==4.30.0
+ftfy==6.2.3
+opencv-python==4.10.0.84
+pydantic-settings==2.4.0
+pydantic==2.8.2
+python-dotenv==1.0.1
+transformers==4.44.0
+PyMuPDF==1.24.9
+bitsandbytes
+peft
+sentence_transformers==3.0.0
+boto3
+faiss-cpu
+gradio
