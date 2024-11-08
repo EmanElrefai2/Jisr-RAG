@@ -18,3 +18,5 @@ sentence_transformers==3.0.0
 boto3
 faiss-cpu
 gradio
+pytest
+pytest-cov

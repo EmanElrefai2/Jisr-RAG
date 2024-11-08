@@ -1,33 +1,34 @@
-# Use the official Python image from the Docker Hub
-FROM python:3.10-slim
+# Use an official Python runtime as a parent image
+FROM python:3.9-slim
 
-# Set environment variables to prevent Python from writing pyc files and buffering stdout
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+# Set environment variables
+ENV PYTHONUNBUFFERED=1
+ENV GRADIO_SERVER_NAME=0.0.0.0
+ENV GRADIO_SERVER_PORT=8000
 
-# Set the working directory inside the container
+# Set working directory
 WORKDIR /app
 
 # Install system dependencies
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y \
     build-essential \
-    libmagic-dev \
-    && apt-get clean \
+    python3-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy the requirements.txt file into the container
-COPY requirements.txt /app/
+# Copy requirements first for better caching
+COPY requirements.txt .
 
 # Install Python dependencies
-RUN pip install --upgrade pip \
-    && pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the entire project into the container
-COPY . /app/
+# Copy the rest of the application
+COPY . .
+
+# Create necessary directories
+RUN mkdir -p output temp
 
 # Expose the port the app runs on
-EXPOSE 7860
+EXPOSE 8082
 
-# Set the command to run the app
+# Command to run the application
 CMD ["python", "main.py"]
